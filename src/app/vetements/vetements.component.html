@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+               <table class="table table-striped">
+                 <thead>
+                    <tr>
+                        <th>Liste de Vetements</th>
+                    </tr>
+                </thead>
+          <tr> <th>Id</th><th>Nom</th> <th>Prix</th>  <th>Date Création</th> </tr>
+               
+                @for (vetement of vetements; track vetement)
+                {
+                <tbody>
+                     <tr >
+                            <td>{{vetement.idVet}}</td>
+                            <td>{{vetement.nomVet}}</td>
+                            <td>{{vetement.prixVet}}</td>
+                            <td>{{vetement.dateCreation | date:'dd/MM/yyyy'}}</td>
+                          </tr>                                    
+                </tbody>
+                }
+            </table>
+        </div>
+    </div>
+</div>
